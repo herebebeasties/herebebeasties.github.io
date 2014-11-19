@@ -320,6 +320,102 @@ http://react-bootstrap.github.io
 
 ---
 
+# Angled headers
+<style>
+table.skew tr th {
+    height: 110px;
+    min-width: 40px;
+    position: relative;
+    vertical-align: bottom;
+    border: 0;
+    text-align: right;
+}
+table.skew tr th div {
+    position: relative;
+    top: 0px;
+    left: 55px;
+    height: 100%;
+    transform:skew(-45deg,0deg);
+    overflow: hidden;
+}
+table.skew td:nth-child(2n),
+table.skew thead th:nth-child(2n) div {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+table.skew td {
+  text-align: center;
+  padding: 0.5em 1em;
+}
+table.skew td:nth-child(1) {
+  text-align: right;
+}
+table.skew thead th span {
+    transform:rotate(315deg);
+    transform-origin:0% 50%; /* Safari and Chrome */
+    text-align: left;
+    white-space: nowrap;
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    margin-bottom: -0.25em;
+    padding-top: 1.25em;
+    bottom: 0;
+}
+</style>
+<table class="skew">
+  <thead>
+    <tr>
+      <th></th>
+      <th><div></div><span>Delicious</span></th>
+      <th><div></div><span>Cheap</span></th>
+      <th><div></div><span>Green</span></th>
+      <th><div></div><span>Is an apple</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Apple</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+    <tr><td>Carrot</td><td>X</td><td>X</td><td></td><td></td></tr>
+    <tr><td>iPad</td><td></td><td></td><td>?</td><td>X</td></tr>
+  </tbody>
+</table>
+---
+
+```css
+table.skew thead tr th {
+    height: 110px; min-width: 40px;
+    position: relative;
+    vertical-align: bottom;
+}
+table.skew thead tr th div {
+    left: 55px; top: 0px; height: 100%;
+    position: relative;
+    transform:skew(-45deg,0deg);
+    overflow: hidden;
+}
+table.skew thead th span {
+    transform:rotate(315deg);
+    transform-origin:0% 50%; /* Safari and Chrome */
+    display: block; position: absolute;
+    width: 100%; left: 50%; bottom: 0;
+    margin-bottom: -0.25em; padding-top: 1.25em;
+}
+```
+
+```html
+<table class="skew">
+  <thead>
+    <tr>
+      <th><div></div><span>Delicious</span></th>
+      ...
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Apple</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+    ...
+```
+---
+
 # Charting
 
  - [React-Sparkline](http://kyleamathews.github.io/react-sparkline/) is very easy:
