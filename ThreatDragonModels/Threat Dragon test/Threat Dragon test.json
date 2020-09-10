@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "title": "Threat Dragon test",
+    "owner": "Alastair"
+  },
+  "detail": {
+    "contributors": [
+      {
+        "name": "herebebeasties"
+      }
+    ],
+    "diagrams": [
+      {
+        "title": "Main",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 0
+      }
+    ],
+    "reviewer": "Alastair's alter ego"
+  }
+}
